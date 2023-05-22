@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Quiz</title>
+    <link rel="stylesheet" type="text/css" href="stylee.css">
+  </head>
+  <body>
+    <h1>Computer System Servicing Quiz</h1>
+    <p id="question"></p>
+    <ul id="choices"></ul>
+    <button id="submit">Submit Answer</button>
+    <p id="score">Score: 0</p>
+
+    <script>
+        // Define the quiz questions and answers
+const quiz = [
+  {
+    question: "What does CPU stand for?",
+    choices: ["Central Processing Unit", "Computer Power Unit", "Control Panel Unit"],
+    answer: "Central Processing Unit"
+  },
+  {
+    question: "What is the most commonly used input device on a computer?",
+    choices: ["Keyboard", "Mouse", "Touchscreen"],
+    answer: "Keyboard"
+  },
+  {
+    question: "What is the primary function of RAM?",
+    choices: ["Storing long-term data", "Executing programs", "Storing short-term data"],
+    answer: "Storing short-term data"
+  },
+  {
+    question: "What does USB stand for?",
+    choices: ["Universal Serial Bus", "Ultra Speed Battery", "Unlimited Storage Backup"],
+    answer: "Universal Serial Bus"
+  },
+  {
+    question: "What is the largest unit of measurement for computer storage?",
+    choices: ["Gigabyte", "Terabyte", "Petabyte"],
+    answer: "Petabyte"
+  }
+];
+
+// Set up initial variables
+let currentQuestion = 0;
+let score = 0;
+
+// Get DOM elements
+const questionEl = document.getElementById("question");
+const choicesEl = document.getElementById("choices");
+const submitBtn = document.getElementById("submit");
+const scoreEl = document.getElementById("score");
+
+// Function to load the current question and choices
+function loadQuestion() {
+  const q = quiz[currentQuestion];
+  questionEl.textContent = q.question;
+
+  // Remove any existing choices
+  while (choicesEl.firstChild) {
+    choicesEl.removeChild(choicesEl.firstChild);
+  }
+
+  // Add new choices
+  q.choices.forEach((choice) => {
+    const li = document.createElement("li");
+    li.textContent = choice;
+    li.addEventListener("click", () => {
+      checkAnswer(choice);
+    });
+    choicesEl.appendChild(li);
+  });
+}
+
+// Function to check the selected answer
+function checkAnswer(choice) {
+  if (choice === quiz[currentQuestion].answer) {
+    score++;
+    scoreEl.textContent = "Score: " + score;
+  }
+  currentQuestion++;
+  if (currentQuestion >= quiz.length) {
+    endQuiz();
+  } else {
+    loadQuestion();
+  }
+}
+
+// Function to end the quiz and display the final score
+function endQuiz() {
+  questionEl.textContent = "ANG GALING MO IDOL!!!";
+  choicesEl.style.display = "none";
+  submitBtn.style.display = "none";
+  scoreEl.textContent = "Final Score: " + score;
+}
+
+// Load the first question
+loadQuestion();
+
+    </script>
+  </body>
+</html>
