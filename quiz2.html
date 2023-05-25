@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Quiz</title>
+  <style>body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#quiz {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#quiz div {
+  margin-bottom: 10px;
+}
+
+#quiz p {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#submit {
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#result {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+#result h2 {
+  margin-bottom: 10px;
+}
+
+#result p {
+  margin-bottom: 5px;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+</style>
+</head>
+<body>
+  <h1>CSS Quiz</h1>
+  <div id="quiz"></div>
+  <button id="submit">Submit</button>
+  <div id="result" style="display: none;"></div>
+
+  <script>// Define the quiz questions and answers
+const quizQuestions = [
+  {
+    question: "Which property is used to change the text color of an element?",
+    options: ["color", "background-color", "text-color", "font-color"],
+    answer: "color"
+  },
+  {
+    question: "Which property is used to set the background image of an element?",
+    options: ["background-image", "image-source", "background-url", "image-url"],
+    answer: "background-image"
+  },
+  {
+    question: "Which property is used to create rounded corners on an element?",
+    options: ["border-radius", "corner-radius", "round-corners", "border-style"],
+    answer: "border-radius"
+  },
+  {
+    question: "Which property is used to control the spacing between lines of text?",
+    options: ["line-height", "text-spacing", "letter-spacing", "text-line-spacing"],
+    answer: "line-height"
+  },
+  {
+    question: "Which property is used to align text horizontally?",
+    options: ["text-align", "text-justify", "align-text", "horizontal-align"],
+    answer: "text-align"
+  }
+];
+
+// Generate the quiz
+const quizContainer = document.getElementById('quiz');
+const submitButton = document.getElementById('submit');
+const resultContainer = document.getElementById('result');
+
+function generateQuiz() {
+  let quizHTML = '';
+
+  for (let i = 0; i < quizQuestions.length; i++) {
+    const optionsHTML = quizQuestions[i].options
+      .map((option, index) => `
+        <label>
+          <input type="radio" name="question${i}" value="${option}">
+          ${option}
+        </label>
+      `)
+      .join('');
+
+    quizHTML += `
+      <div>
+        <p>${i + 1}. ${quizQuestions[i].question}</p>
+        ${optionsHTML}
+      </div>
+    `;
+  }
+
+  quizContainer.innerHTML = quizHTML;
+}
+
+// Calculate the quiz score and display the result
+function showResult() {
+  let score = 0;
+  let resultHTML = `<h2>Quiz Result</h2>`;
+
+  for (let i = 0; i < quizQuestions.length; i++) {
+    const selectedOption = document.querySelector(`input[name="question${i}"]:checked`);
+
+    if (selectedOption && selectedOption.value === quizQuestions[i].answer) {
+      score++;
+      resultHTML += `<p class="correct">Question ${i + 1}: Correct</p>`;
+    } else {
+      resultHTML += `<p class="wrong">Question ${i + 1}: Incorrect</p>`;
+    }
+  }
+
+  resultHTML += `<p>Your score: ${score}/${quizQuestions.length}</p>`;
+
+  resultContainer.innerHTML = resultHTML;
+  resultContainer.style.display = 'block';
+}
+
+// Event listener for the submit button
+submitButton.addEventListener('click', showResult);
+
+// Generate the quiz when the page loads
+generateQuiz();
+  </script>
+</body>
+</html>
