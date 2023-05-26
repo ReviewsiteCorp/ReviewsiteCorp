@@ -45,7 +45,7 @@ span {
 	  .dropdown-content {
 		display: none;
 		position: absolute;
-		background-color: #03e8fc;
+		background-color: #fcfdfd;
 		min-width: 200px;
 		box-shadow: 0px 8px 0px 0px black;
 		z-index: 1;
@@ -77,7 +77,7 @@ span {
 		  .otherdiv {
 			display: none;
 			position: absolute;
-			background-color: #03e8fc;
+			background-color: #fafafa;
 			min-width: 150px;
 			box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.2);
 			z-index: 1;
@@ -196,7 +196,7 @@ nav ul {
 
 nav ul li a {
 	line-height: 80px;
-	color: white;
+	color: rgb(255, 255, 255);
 	padding: 12px 30px;
 	text-decoration: none;
 	font-size: 14px;
@@ -232,7 +232,7 @@ section {
 footer {
 
 	text-align: center;
-	background-color: #14b182;
+	background-color: #616262;
 	width: auto;
 	height: 60px;
 	padding: 5px;

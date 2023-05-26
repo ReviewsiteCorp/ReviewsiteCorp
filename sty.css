@@ -1,0 +1,197 @@
+    /* Add some basic styles to the quiz container */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      padding: 10px 80px;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.6 );
+      border-bottom: 1px solid #000000;
+      transform: scaleX(1);
+  }
+  
+  nav .logo {
+      padding: 22px 20px;
+      height: 50px;
+      float: left;
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: underline black;
+      margin-top: 5px;
+      
+  
+  
+  
+  }
+  
+  nav ul {
+      list-style: none;
+      float: right;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+  
+  nav ul li a {
+      line-height: 80px;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+  
+  nav ul li a:hover {
+      transition: all 1s ease 0s ;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 6px;
+      color: ;
+  }
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+      height: 100vh;
+      background:  url(fin.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    #question {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    #choices {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    
+    #choices li {
+      background-color: #fff;
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    #choices li:hover {
+      background-color: gray;
+    }
+    
+    #submit {
+      display: block;
+      margin: 0 auto;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    #submit:hover {
+      background-color:rgb(252, 254, 255);
+    }
+    
+    #score {
+      font-size: 18px;
+      text-align: center;
+    }
+    
+    /* Add some responsive styles */
+    @media (max-width: 768px) {
+      #question {
+        font-size: 20px;
+      }
+    
+      #choices li {
+        font-size: 18px;
+      }
+    
+      #submit {
+        font-size: 18px;
+      }
+    
+      #score {
+        font-size: 16px;
+      }
+    }
+    li.dropdown {
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #ffffff;
+          min-width: 200px;
+          box-shadow: 0px 8px 0px 0px black;
+          z-index: 1;
+          border-radius: 10px;
+          padding: 0px;
+          box-sizing: 100px 50px;
+        
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 0px 0px;
+          text-decoration: none;
+          display: block;
+          text-align: center ;
+          padding: 0px;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            padding: -0px;
+            
+          }
+  
+          li.others {
+              display: inline-block;
+            }
+            
+            .otherdiv {
+              display: none;
+              position: absolute;
+              background-color: #ffffff;
+              min-width: 150px;
+              box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+              border-radius: 10px;
+              padding: 0px;
+            
+            }
+            
+            .otherdiv a {
+              color: black;
+              padding: -10px 0px;
+              text-decoration: none;
+              display: block;
+              text-align: center ;
+              padding: px;
+            }
+            
+            .others:hover .otherdiv {
+                display: block;
+                padding: -0px;
+                
+              }

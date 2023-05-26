@@ -2,7 +2,10 @@
 *{
   margin: 0;
   padding: 0;
+  color: white;
+
 }
+
 nav {
 	position: fixed;
 	top: 0;
@@ -58,10 +61,10 @@ nav ul li a:hover {
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
+    background-color: #1d1a1a;
     padding: 20px;
     height: 100vh;
-    background:  url(fin.jpg);
+    background:  url("adw.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -82,7 +85,7 @@ body {
   }
   
   #choices li {
-    background-color: #fff;
+    background-color: #242020;
     border: 1px solid black;
     padding: 10px;
     margin-bottom: 50px;

@@ -2,9 +2,218 @@
 <html>
 <head>
   <title>HTML Quiz</title>
-  <style>body {
+<header>
+    <nav>
+    
+  
+      
+  
+      <div class="logo">REVIEWSITE</div>	
+      
+      <ul>	
+      <li><a href="index.html">Home</a></li>
+      <li><a href="makewebsite.html">How to Make a Website</a></li>
+      <li><a href="About.html"  onclick="alert ('(For Educational Purposes Only)This is just an example for may coffee shop -Student/Creator THANK YOU <3')" >About</a></li>
+      <li class="dropdown"><a class="dropbtn" href="javascript:void(0)">QUIZZES</a><div class="dropdown-content">
+              <a href="quiz.html">Quiz 1</a>
+              <a href="quiz1.html">Quiz 2</a>
+              <a href="quiz2.html">Quiz 3</a>                
+      <li class="dropdown"><a class="dropbtn" href="javascript:void(0)">TOPIC</a><div class="dropdown-content">
+              <a href="html.html">HTML</a>
+              <a href="css.html">CSS</a>
+  
+            </div></li>
+        
+        <li class="others"><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <a class="othersa" href="javascript:void(0)">Others<span class="button"><ion-icon name="caret-down-outline"></ion-icon></span></a><div class="otherdiv">
+              <a href="signin.html">LOGIN</a>
+        <a href="darkmodeIndex.html">Darkmode</a>
+  
+            </div></li>
+    </nav>
+  </header>
+  <style>
+
+  nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	padding: 10px 80px;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, 0.6 );
+	border-bottom: 1px solid #000000;
+	transform: scaleX(1);
+}
+
+nav .logo {
+	padding: 22px 20px;
+	height: 50px;
+	float: left;
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: underline black;
+	margin-top: 5px;
+	
+
+
+
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li a {
+	line-height: 80px;
+	color: white;
+	padding: 12px 30px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+nav ul li a:hover {
+	transition: all 1s ease 0s ;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 6px;
+	color }
+
+  li.dropdown {
+		display: inline-block;
+	  }
+	  
+	  .dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #ffffff;
+		min-width: 200px;
+		box-shadow: 0px 8px 0px 0px black;
+		z-index: 1;
+		border-radius: 10px;
+		padding: 0px;
+		box-sizing: 100px 50px;
+	  
+	  }
+	  
+	  .dropdown-content a {
+		color: black;
+		padding: 0px 0px;
+		text-decoration: none;
+		display: block;
+		text-align: center ;
+		padding: 0px;
+	  }
+	  
+	  .dropdown:hover .dropdown-content {
+		  display: block;
+		  padding: -0px;
+		  
+		}
+
+		li.others {
+			display: inline-block;
+		  }
+		  
+		  .otherdiv {
+			display: none;
+			position: absolute;
+			background-color: #ffffff;
+			min-width: 150px;
+			box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+			border-radius: 10px;
+			padding: 0px;
+		  
+		  }
+		  
+		  .otherdiv a {
+			color: black;
+			padding: -10px 0px;
+			text-decoration: none;
+			display: block;
+			text-align: center ;
+			padding: px;
+		  }
+		  
+		  .others:hover .otherdiv {
+			  display: block;
+			  padding: -0px;
+			  
+			}li.dropdown {
+		display: inline-block;
+	  }
+	  
+	  .dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #ebf4f5;
+		min-width: 200px;
+		box-shadow: 0px 8px 0px 0px black;
+		z-index: 1;
+		border-radius: 10px;
+		padding: 0px;
+		box-sizing: 100px 50px;
+	  
+	  }
+	  
+	  .dropdown-content a {
+		color: black;
+		padding: 0px 0px;
+		text-decoration: none;
+		display: block;
+		text-align: center ;
+		padding: 0px;
+	  }
+	  
+	  .dropdown:hover .dropdown-content {
+		  display: block;
+		  padding: -0px;
+		  
+		}
+
+		li.others {
+			display: inline-block;
+		  }
+		  
+		  .otherdiv {
+			display: none;
+			position: absolute;
+			background-color: #ffffff;
+			min-width: 150px;
+			box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+			border-radius: 10px;
+			padding: 0px;
+		  
+		  }
+		  
+		  .otherdiv a {
+			color: black;
+			padding: -10px 0px;
+			text-decoration: none;
+			display: block;
+			text-align: center ;
+			padding: px;
+		  }
+		  
+		  .others:hover .otherdiv {
+			  display: block;
+			  padding: -0px;
+			  
+			}
+  body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      background-image:url("fin.jpg");  
     }
 
     h1 {
@@ -63,6 +272,7 @@
   </style>
 </head>
 <body>
+  <br><br><br><br><br><br>  
   <h1>HTML Quiz</h1>
   <div id="quiz"></div>
   <button id="submit">Submit</button>
